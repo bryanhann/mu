@@ -1,0 +1,3 @@
+echo mu oh mu! [$0] [$*]
+ls -l ~/.mu
+set | grep ^MU

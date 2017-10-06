@@ -1,0 +1,3 @@
+ECHO MU:DOT.PROFILE
+export PATH=$PATH:${HOME}/.mu/bin  # XXX HARDCODED
+
