@@ -1,3 +1,1 @@
-echo mu oh mu! [$0] [$*]
-ls -l ~/.mu
-set | grep ^MU
+[ -f ${HOME}/mu/bin/scripts/$1 ] && ${HOME}/mu/bin/scripts/$* || mu help

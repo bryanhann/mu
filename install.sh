@@ -28,8 +28,8 @@ cd .
 # Now it is safe to define our constants
 ##################################################################
 
-__MAGIC__=4999186371574026b8cc2a53b42f71e9
-__LINK__=${HOME}/.mu
+__MAGIC__=4999186371574026b8cc2a53b42f71e3
+__LINK__=${HOME}/mu
 __TARGET__=${PWD}
 __BUFFER__=${HOME}/.tmp.$RANDOM.$RANDOM
 
@@ -40,7 +40,7 @@ __BUFFER__=${HOME}/.tmp.$RANDOM.$RANDOM
 ##################################################################
 
 rm ${__LINK__} 2> /dev/null
-echo "Linking [~/.mu] to [$__TARGET__]."
+echo "Linking [~/mu] to [$__TARGET__]."
 ln -s $__TARGET__ ${__LINK__}
 
 
@@ -51,9 +51,9 @@ ln -s $__TARGET__ ${__LINK__}
 for ii in `ls -A -1 ${__TARGET__}/source | grep "^\."` ; do
     original=${HOME}/$ii
     cat $original | grep -v $__MAGIC__ > $__BUFFER__   
-    echo "source ${__LINK__}/source/$ii # $__MAGIC__ $@" >> $__BUFFER__
+    echo source ${__LINK__}/source/dot$ii  $__MAGIC__  >> $__BUFFER__
     cat $__BUFFER__ > $original
     rm $__BUFFER__
-    echo "Updating [~/$ii]; it will now source [~/.mu/source/$ii]."
+    echo "Updating [~/$ii]; it will now source [$__LINK__/source/$ii]."
 done
 
