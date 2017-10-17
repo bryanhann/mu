@@ -1,4 +1,4 @@
-if [ "$0:$1" == "./mu.bash:install" ] ; then 
+if [ "$0:$1" == "./proxy.bash:install" ] ; then 
     export mu_cmdname=$3
     export mu_cmdpath=$2/$3
     export mu_cmddest=$PWD/$0
@@ -17,8 +17,8 @@ if [ "$0:$1" == "./mu.bash:install" ] ; then
     exit
 fi
 
-if [ "$0" == "./mu.bash" ] ; then 
-    cat $0/../docs/usage.txt
+if [ "$0" == "./docs/proxy.bash" ] ; then 
+    cat $0/../install-proxy.usage
     exit 
 fi
 

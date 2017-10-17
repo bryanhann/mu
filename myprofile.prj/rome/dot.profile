@@ -1,4 +1,3 @@
-.mulog ++${HOME}/mu/source/dot.profile
 
 #$export PATH=$PATH:${HOME}/mu/bin  # XXX HARDCODED
 
@@ -12,6 +11,4 @@
 #    echo foo
 #} 
 
-source ~/mu/source/dot.bashrc
-.mulog --${HOME}/mu/source/dot.profile
-
+source ~/.bashrc
