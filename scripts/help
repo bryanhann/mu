@@ -1,0 +1,6 @@
+echo USAGE:
+
+for i in $( ls $0/.. ); do
+    echo "    $mu_cmdname $i"
+done
+

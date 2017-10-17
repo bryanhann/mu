@@ -1,1 +1,0 @@
-[ -f ${HOME}/mu/bin/scripts/$1 ] && ${HOME}/mu/bin/scripts/$* || mu help

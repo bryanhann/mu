@@ -1,0 +1,1 @@
+echo $mu_cmdpath \-\> $mu_cmddest

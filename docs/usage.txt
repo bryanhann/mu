@@ -1,0 +1,29 @@
+Usage:  ./mu install DIR NAME 
+
+    Install a proxy to this script at DIR/NAME
+
+    This is the only way of using this command directly. It must
+    be called precisely as indicated from within its own directory.
+
+    Installed proxy files (usually placed somewhere on the $PATH) 
+    call the ./mu script with its full pathname after setting its
+    own environment variables for ./mu to use.
+
+Example: ./mu install /usr/local/bin foo                     
+                                                      
+    $ ./mu install /usr/local/bin foo
+    $ cat /usr/local/bin/foo
+    export mu_cmdname=foo
+    export mu_cmdpath=/usr/local/bin/foo
+    export mu_cmddest=/full/path/to/mu
+    /full/path/to/mu $*
+    $ foo marco
+    polo
+    $
+    $ ./mu install ~/bin/bar
+    $ bar marco
+    polo
+    $ foo marco
+    polo
+
+
